@@ -24,7 +24,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Frontend Developer | Freelancer | Mentor
+            Frontend Developer  Freelancer  Mentor
           </h1>
         </motion.div>
 
@@ -36,7 +36,7 @@ const HeroContent = () => {
             {/* Providing */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              Diyorbek G'aybullayev {" "}
+              Diyorbek Gaybullayev {" "}
             </span>
             {/* project exprience */}
           </span>
