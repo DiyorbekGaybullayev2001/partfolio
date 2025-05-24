@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   slideInFromLeft,
@@ -11,11 +11,24 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 const HeroContent = () => {
+
+  const [showFullText, setShowFullText] = useState(false);
+
+  const toggleText = () => {
+    setShowFullText((prev) => !prev);
+  };
+
+  const fullText =
+    "I am a passionate and innovative frontend developer with over 2 years of experience, proficient in React, JavaScript, TypeScript, and Tailwind CSS. My strengths lie in solving complex problems through simple and effective solutions, designing user interfaces, and collaborating effectively within a team. As a responsible team member, I am dedicated to creating user interfaces that align with business objectives, foster growth, and meet client needs. I am always eager to learn and grow, and I am excited to take on new challenges in the ever-evolving world of web development. I am committed to continuous learning and staying up-to-date with the latest trends and technologies in the field. I am also a mentor, helping others to grow and succeed in their careers.";
+
+  const shortText =
+    "I am a passionate frontend developer with over 2 years of experience. Proficient in React, JavaScript, TypeScript, and Tailwind CSS. My strengths lie in solving complex problems through simple and effective solutions, designing user interfaces, and collaborating effectively within a team. As a responsible team member....";
+
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-row container m-auto items-center justify-center px-20 mt-40 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
@@ -23,8 +36,8 @@ const HeroContent = () => {
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">
-            Frontend Developer  Freelancer  Mentor
+          <h1 className="Welcome-text text-[15px]">
+            Frontend Developer | Freelancer | Mentor
           </h1>
         </motion.div>
 
@@ -36,7 +49,7 @@ const HeroContent = () => {
             {/* Providing */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              Diyorbek Gaybullayev {" "}
+                Diyorbek Gaybullayev  {" "}
             </span>
             {/* project exprience */}
           </span>
@@ -44,17 +57,21 @@ const HeroContent = () => {
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className={`text-lg text-gray-400 mt-5 max-w-[600px] ${
+            showFullText ? "line-clamp-none" : "line-clamp-5"
+          }`}
         >
-          I m a Frontend developer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
+          {showFullText ? fullText : shortText}
         </motion.p>
-        {/* <motion.a
+
+        <motion.button
+          onClick={toggleText}
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          Learn More!
-        </motion.a> */}
+          {showFullText ? "Show Less" : "Learn More"}
+        </motion.button>
+
       </div>
 
       <motion.div
@@ -63,7 +80,7 @@ const HeroContent = () => {
       >
         <Image
           src="/mainIconsdark.svg"
-          alt="work icons"
+          alt="Diyorbek Gaybullayev frontend development icons"
           height={650}
           width={650}
         />

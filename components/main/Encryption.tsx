@@ -1,11 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
 import Image from "next/image";
 
 const Encryption = () => {
+  const [loading, setLoading] = useState(false);
+
+  const startLoading = () => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 2000);
+  };
   return (
     <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full">
       <div className="absolute w-auto h-auto top-0 z-[5]">
@@ -29,7 +35,7 @@ const Encryption = () => {
             alt="Lock top"
             width={50}
             height={50}
-            className="w-[50px] translate-y-5 transition-all duration-200 group-hover:translate-y-11"
+            className="w-[50px] translate-y-5 transition-all ease-in-out duration-200 group-hover:translate-y-11"
           />
           <Image
             src="/LockMain.png"
@@ -41,8 +47,20 @@ const Encryption = () => {
         </div>
 
         <div className="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]">
-          <h1 className="Welcome-text text-[12px]">Encryption</h1>
+          <h1 onClick={startLoading} className="Welcome-text cursor-pointer text-[12px]">Encryption</h1>
         </div>
+
+        {/* {loading && (
+        <div className="w-[300px] mt-4 bg-gray-700 rounded-full h-4 overflow-hidden">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 2 }}
+            className="h-full bg-gradient-to-r from-purple-500 to-cyan-500"
+          />
+        </div>
+      )} */}
+
       </div>
       <div className="absolute z-[20] bottom-[10px] px-[5px]">
         <div className="cursive text-[20px] font-medium text-center text-gray-300">

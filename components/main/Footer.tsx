@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div id="contact" className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
         <div className="w-full flex flex-col items-center justify-center m-auto">
-            <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
+            <div className="w-full h-full flex flex-row items-center justify-around flex-wrap font-serif">
                 
 
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="mb-[20px] text-[15px] text-center">
+            <div className="text-[12px] font-mono text-center">
                 &copy; diyorcoder 2025 Inc. All rights reserved
             </div>
         </div>
