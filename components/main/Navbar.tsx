@@ -15,15 +15,15 @@ const Navbar = () => {
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
-            src="/logodc2.png"
+            src="/logo10.png"
             alt="logo"
             width={65}
             height={65}
             className="cursor-pointer hover:animate-slowspin"
           />
 
-          <span className="font-bold ml-[10px] hidden md:block text-gray-400">
-            DIYORCODER
+          <span className="font-bold font-serif hidden md:block text-gray-400">
+            DIYORCODER.UZ
           </span>
         </a>
 
