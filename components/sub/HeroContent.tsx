@@ -49,7 +49,7 @@ const HeroContent = () => {
             {/* Providing */}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-                Diyorbek G'aybullayev  {" "}
+                  {` Diyorbek G'aybullayev`}  {" "}
             </span><br />
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mt-[30px]">Web Developer</p>
           </span>
