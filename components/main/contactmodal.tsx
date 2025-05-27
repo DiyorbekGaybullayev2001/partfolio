@@ -22,13 +22,13 @@ const ContactModal = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed top-[400px] left-0 w-full h-full bg-opacity-50 z-50 flex items-center justify-center"
+            className="fixed top-[150px] sm:top-[400px] left-0  w-full h-full bg-opacity-50 z-50 flex items-center justify-center"
           >
             <motion.div
               initial={{ y: "-100vh" }}
               animate={{ y: 0 }}
               exit={{ y: "100vh" }}
-              className="bg-white rounded-xl p-6 w-full max-w-md text-black relative"
+              className="bg-white rounded-xl p-4 w-[90%] sm:w-full max-w-md text-black relative"
             >
               <button
                 onClick={() => setIsOpen(false)}

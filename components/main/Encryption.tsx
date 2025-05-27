@@ -13,11 +13,11 @@ const Encryption = () => {
     setTimeout(() => setLoading(false), 2000);
   };
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full">
+    <div className="flex flex-row relative p-[10px] items-center justify-center w-full h-[60vh] sm:h-[70vh] md:h-[80vh]">
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
-          className="text-[40px] font-medium font-serif text-center text-gray-200"
+          className="text-[30px] sm:text-[40px] p-[10px] font-medium font-serif text-center text-gray-200"
         >
           Performance
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
@@ -35,18 +35,18 @@ const Encryption = () => {
             alt="Lock top"
             width={50}
             height={50}
-            className="w-[50px] translate-y-5 transition-all ease-in-out duration-200 group-hover:translate-y-11"
+            className="w-[40px] sm:w-[50px] translate-y-5 transition-all ease-in-out duration-200 group-hover:translate-y-11"
           />
           <Image
             src="/LockMain.png"
             alt="Lock Main"
             width={70}
             height={70}
-            className=" z-10"
+            className=" z-10 w-[50px] sm:w-[70px]"
           />
         </div>
 
-        <div className="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]">
+        <div className="Welcome-box md:px-[15px] p-[4px] z-[10] border my-[20px] border-[#7042f88b] opacity-[0.9]">
           <h1 onClick={startLoading} className="Welcome-text font-serif cursor-pointer text-[12px]">Encryption</h1>
         </div>
 
@@ -75,7 +75,7 @@ const Encryption = () => {
           autoPlay
           playsInline
           preload="false"
-          className="w-full h-auto"
+          className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] object-cover"
           src="/encryption.webm/"
         />
       </div>

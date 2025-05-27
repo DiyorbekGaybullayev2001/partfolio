@@ -5,7 +5,6 @@ import {
   RxDiscordLogo,
   RxGithubLogo,
   RxInstagramLogo,
-  RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
 import { ImBooks } from "react-icons/im";

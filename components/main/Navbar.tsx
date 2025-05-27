@@ -1,10 +1,19 @@
-import React  from "react";
+"use client";
+import React, { useState }  from "react";
 import Image from "next/image";
-import { Socials } from "@/constants";
 import ContactModal from "./contactmodal";
-
+import { LiaTelegramPlane } from "react-icons/lia";
+import {
+  RxInstagramLogo,
+  RxLinkedinLogo,
+  RxHamburgerMenu,
+   RxCross2 ,
+} from "react-icons/rx";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <>
     
@@ -27,7 +36,7 @@ const Navbar = () => {
           </span>
         </a>
 
-        <div className="w-[500px] h-full flex flex-row items-center justify-between  m-auto">
+        <div className="hidden lg:flex w-[500px] h-full flex-row items-center justify-between  m-auto">
           <div className="flex items-center font-serif justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
             <a href="#about-me" className="cursor-pointer">
               About Me
@@ -44,24 +53,80 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5">
-          {/* {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))} */}
+        
+
+          <div className="hidden lg:flex  gap-1 text-[#ccc] ">
+            
+            <a
+              href="https://instagram.com/diyorcoder.uz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-xl"
+            >
+              <RxInstagramLogo className="mr-2 " />
+              
+            </a>
+            <a
+              href="https://t.me/Developer_08_18"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-xl"
+            >
+              <LiaTelegramPlane className="mr-2" />
+              
+            </a>
+            <a
+              href="https://www.linkedin.com/in/diyorbek-gaybullayev-9a6b122a0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center "
+            >
+              <RxLinkedinLogo className="mr-2 text-xl" />
+            
+            </a>
+          <ContactModal/>
+          </div>
 
     
-          <ContactModal/>
+
+          {/* Mobile Hamburger Icon */}
+          <div className="lg:hidden">
+            <button onClick={toggleMenu} className="text-white text-2xl">
+              {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
+            </button>
+          </div>
 
        
         </div>
       </div>
-    </div>
+
+       {/* Mobile Dropdown Menu */}
+       {isOpen && (
+        <div className="lg:hidden fixed top-[65px] w-full bg-[#030014ec] backdrop-blur-md z-40 border-t border-[#7042f861] animate-slide-down">
+          <div className="flex flex-col items-center text-gray-200 font-serif space-y-6 py-6">
+            <a href="#about-me" onClick={toggleMenu}>About Me</a>
+            <a href="#skills" onClick={toggleMenu}>Skills</a>
+            <a href="#projects" onClick={toggleMenu}>Projects</a>
+            <a href="#contact" onClick={toggleMenu}>Contact</a>
+
+            {/* Social Icons */}
+            <div className="flex items-center space-x-4">
+              <a href="https://instagram.com/diyorcoder.uz" target="_blank" rel="noopener noreferrer">
+                <RxInstagramLogo className="text-xl hover:text-white" />
+              </a>
+              <a href="https://t.me/Developer_08_18" target="_blank" rel="noopener noreferrer">
+                <LiaTelegramPlane className="text-xl hover:text-white" />
+              </a>
+              <a href="https://www.linkedin.com/in/diyorbek-gaybullayev-9a6b122a0/" target="_blank" rel="noopener noreferrer">
+                <RxLinkedinLogo className="text-xl hover:text-white" />
+              </a>
+            </div>
+
+            <ContactModal />
+          </div>
+        </div>
+      )}
+    
 
     
 
@@ -70,3 +135,21 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
