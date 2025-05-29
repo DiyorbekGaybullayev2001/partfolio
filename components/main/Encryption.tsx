@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
 import Image from "next/image";
+import ContactModal from "./contactmodal";
 
 const Encryption = () => {
   const [loading, setLoading] = useState(false);
@@ -49,6 +50,7 @@ const Encryption = () => {
         <div className="Welcome-box md:px-[15px] p-[4px] z-[10] border my-[20px] border-[#7042f88b] opacity-[0.9]">
           <h1 onClick={startLoading} className="Welcome-text font-serif cursor-pointer text-[12px]">Encryption</h1>
         </div>
+          {/* <ContactModal/> */}
 
         {/* {loading && (
         <div className="w-[300px] mt-4 bg-gray-700 rounded-full h-4 overflow-hidden">

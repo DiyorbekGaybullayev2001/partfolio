@@ -4,11 +4,12 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DiyorCoder  |  Diyorbek G'aybullayev - Web Developer ",
+  title: "Diyorbek G'aybullayev - Web Developer ",
   description: "Explore the personal portfolio of Diyorbek G'aybullayev — a skilled frontend developer, freelancer, and mentor specializing in React and modern web technologies.",
   keywords: [
     "Diyorbek G'aybullayev",
@@ -108,6 +109,23 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <Script
+        id="replain-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.replainSettings = { id: '22025654-1c72-4f5b-9c20-e73aeab3306f' };
+            (function(u){
+              var s=document.createElement('script');s.async=true;s.src=u;
+              var x=document.getElementsByTagName('script')[0];
+              x.parentNode.insertBefore(s,x);
+            })('https://widget.replain.cc/dist/client.js');
+          `,
+        }}
+      />
+
+
+      
     </html>
   );
 }

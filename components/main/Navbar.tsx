@@ -1,5 +1,5 @@
 "use client";
-import React, { useState }  from "react";
+import React, { useEffect, useState }  from "react";
 import Image from "next/image";
 import ContactModal from "./contactmodal";
 import { LiaTelegramPlane } from "react-icons/lia";
@@ -14,8 +14,42 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+
+  
+    const [showButton, setShowButton] = useState<boolean>(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setShowButton(window.scrollY > 500); // 500px dan keyin tugma ko‘rinadi
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      // Komponent unmount bo‘lganda listenerni tozalash
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+      });
+    };
+  
+
   return (
     <>
+
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed z-50 bottom-8 left-8 bg-gradient-to-r from-purple-800 to-cyan-500 text-white font-bold p-[14px] rounded-full shadow-lg hover:bg-blue-700 transition"
+        >
+          ↑
+        </button>
+      )}
     
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
