@@ -14,8 +14,8 @@ const ProjectCard = ({ src, title, description }: Props) => {
         src={src}
         alt={title}
         width={500}
-        height={500}
-        className="w-full h-[150px] sm:h-[200px] "
+        height={400}
+        className="w-full h-[140px] sm:h-[180px] "
       />
 
       <div className="relative p-2 font-serif">

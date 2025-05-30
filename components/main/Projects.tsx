@@ -7,77 +7,77 @@ const Projects = () => {
     {
       src: "/sam.png",
       title: "Sam viza Tour",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Developed a complete travel agency website with a custom design and booking functionality....",
     },
     {
       src: "/sector.png",
       title: "Sector Technologies ",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Built an e-commerce platform for tech products with modern UI/UX and secure payment integration...",
     },
     {
       src: "/tea.png",
       title: "Fruteacorp",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Designed a promotional landing page with discount code integration and vibrant visuals....",
     },
     {
       src: "/chinor.png",
       title: "Chinor Mebel ",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Created a product catalog website for a furniture company with order management features....",
     },
     {
       src: "/gp.png",
       title: "GP. Website",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Developed a corporate website for a digital marketing agency with a sleek, interactive design....",
     },
     {
       src: "/moderna.png",
       title: "Moderna Website",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Designed and developed a modern informational website with interactive UI and responsive layout....",
     },
     {
       src: "/auto.png",
       title: "AutoZoom",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Built a car rental website with real-time booking, vehicle selection, and payment system integration....",
     },
     {
       src: "/saka.png",
       title: "SakaHolding",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Created a corporate site for a holding company offering multi-service navigation and user-friendly interface...",
     },
     {
       src: "/sigma.png",
       title: "Sigma Servis ",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Developed an auto parts service platform with catalog browsing and inquiry functionality....",
     },
     {
       src: "/watch.png",
       title: "Watch ",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "Designed a sleek product landing page for a smart watch with detailed features and minimalist layout....",
     },
     {
       src: "/sayt1.png",
       title: "Bootslander",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "A modern landing page built with Bootstrap. Features responsive design, smooth animations, and optimized call-to-action sections for maximum conversions....",
     },
     {
       src: "/amazon.png",
       title: "Amazon clone",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "A fully functional e-commerce website mimicking Amazon's core features. Includes product listings, shopping cart, user authentication, and payment integration...",
     },
     {
       src: "/target.png",
       title: "Target Website",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "A corporate website designed for a specific target audience. Focuses on clean UI/UX, fast loading times, and clear business messaging...",
     },
     {
       src: "/dezinfeksiya.png",
       title: "Dezinfeksiya uz",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "A sanitation services platform for Uzbekistan. Offers disinfection booking, service information, and safety guidelines with a user-friendly interface...",
     },
     {
       src: "/flymoderntour.png",
       title: "Fly Modern Tour",
-      description: "Lorem ipsum dolor sit amet...",
+      description: "A sleek travel agency website with tour packages, flight bookings, and hotel reservations. Built with modern design trends and seamless navigation...",
     },
   ];
 
