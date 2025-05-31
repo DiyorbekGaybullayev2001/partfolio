@@ -71,17 +71,17 @@ const Navbar = () => {
         </a>
 
         <div className="hidden lg:flex w-[500px] h-full flex-row items-center justify-between  m-auto">
-          <div className="flex items-center font-serif justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#about-me" className="cursor-pointer">
+          <div className="flex items-center font-serif justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px]  rounded-full text-gray-200">
+            <a href="#about-me" className="cursor-pointer py-[10px] hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 transition-all">
               About Me
             </a>
-            <a href="#skills" className="cursor-pointer">
+            <a href="#skills" className="cursor-pointer py-[10px] hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 transition-all">
               Skills
             </a>
-            <a href="#projects" className="cursor-pointer">
+            <a href="#projects" className="cursor-pointer py-[10px] hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 transition-all">
               Projects
             </a>
-            <a href="#contact" className="cursor-pointer">
+            <a href="#contact" className="cursor-pointer py-[10px] hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 transition-all">
               Contact
             </a>
           </div>
