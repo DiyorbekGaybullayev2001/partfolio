@@ -5,6 +5,7 @@ import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -107,6 +108,7 @@ export default function RootLayout({
         <StarsCanvas />
         <Navbar />
         {children}
+        <Analytics/>
         <Footer />
       </body>
       <Script
