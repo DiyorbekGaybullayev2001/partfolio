@@ -12,6 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Diyorbek G'aybullayev - Web Developer ",
   description: "Explore the personal portfolio of Diyorbek G'aybullayev — a skilled frontend developer, freelancer, and mentor specializing in React and modern web technologies.",
+  icons: {
+    icon: "/logo10.png", // bu yerda siz joylagan fayl nomi
+  },
   keywords: [
     "Diyorbek G'aybullayev",
     "Diyor",
@@ -111,7 +114,7 @@ export default function RootLayout({
         <Analytics/>
         <Footer />
       </body>
-      <Script
+      <Script 
         id="replain-script"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
