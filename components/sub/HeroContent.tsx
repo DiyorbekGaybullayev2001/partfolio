@@ -9,6 +9,7 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+// import  Spline  from '@splinetool/react-spline';
 
 const HeroContent = () => {
 
@@ -92,6 +93,10 @@ const HeroContent = () => {
           width={650}
         />
       </motion.div>
+
+
+
+      {/* <Spline scene="https://prod.spline.design/UKtaCudGJwATUawJ/scene.splinecode"/> */}
     </motion.div>
   );
 };

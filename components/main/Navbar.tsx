@@ -101,7 +101,7 @@ const Navbar = () => {
               
             </a>
             <a
-              href="https://t.me/Developer_08_18"
+              href="https://t.me/diyorcoderuz"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-xl"

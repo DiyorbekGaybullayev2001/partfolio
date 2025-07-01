@@ -108,26 +108,26 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
         <Navbar />
         {children}
         <Analytics/>
         <Footer />
+        <Script 
+          id="replain-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.replainSettings = { id: '22025654-1c72-4f5b-9c20-e73aeab3306f' };
+              (function(u){
+                var s=document.createElement('script');s.async=true;s.src=u;
+                var x=document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s,x);
+              })('https://widget.replain.cc/dist/client.js');
+            `,
+          }}
+        />
       </body>
-      <Script 
-        id="replain-script"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.replainSettings = { id: '22025654-1c72-4f5b-9c20-e73aeab3306f' };
-            (function(u){
-              var s=document.createElement('script');s.async=true;s.src=u;
-              var x=document.getElementsByTagName('script')[0];
-              x.parentNode.insertBefore(s,x);
-            })('https://widget.replain.cc/dist/client.js');
-          `,
-        }}
-      />
 
 
       
